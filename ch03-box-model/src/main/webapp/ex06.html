@@ -8,10 +8,50 @@ body {
 	margin:0;
 	padding:0;
 }
+
+a {
+	margin: 13px auto;
+	
+	display: block;
+	width: 200px;
+    padding: 17px 0;
+    border: 1px solid RGB(0, 0, 0);
+    border-radius: 4px;
+    background-color: #03a94d;
+    box-shadow: 0 2px 4px 0 rgba(3, 199, 90, .12);
+    text-decoration: none;
+    color: #fff;	
+	text-align: center;	
+}
+
+a i {
+	display: inline-block;
+    width: 72px;
+    height: 14px;
+	background-image: url(/ch03/images/naver.png);
+    background-size: 468px 457px;
+    background-position: -130px -301px;
+    background-repeat: no-repeat;
+    margin: 5px 0 0 0;
+    vertical-align: top;	
+}
+
+a i .blind {
+	display: inline-block;
+	width: 1px;
+    height: 1px;
+	overflow: hidden;    
+}
 </style>
 </head>
 
 <body>
 	<h1>백그라운드 예제</h1>
+	<a href="/user/login">
+		<i>
+			<span class="blind">naver</span>
+		</i>
+		로그인
+	</a>
 </body>
 </html>

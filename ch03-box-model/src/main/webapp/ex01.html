@@ -45,9 +45,36 @@ window.onload = function() {
 	elDiv = document.getElementById("my-box");
 	
 	elDiv.onclick = function() {
-		console.log("clicked");
+		marginTop = parseInt(elDiv.style.marginTop);
+		
+		intervalId = setInterval(function(){
+			if(marginTop <= -80) {
+				clearInterval(intervalId);
+				return;
+			}
+			
+			marginTop -= 10;
+			elDiv.style.marginTop = marginTop + "px";
+		}, 10);		
 	}
 }
+
+/*
+count = 0;
+intervalId = setInterval(function(){
+	if(count >= 10) {
+		clearInterval(intervalId);
+		return;
+	}
+	console.log("count:" + count);
+	count++;
+}, 500);
+console.log(intervalId);
+*/
+
+// setTimeout(function(){console.log("time out");}, 3000);
+// console.log("ok");
+
 </script>
 </head>
 <body>
