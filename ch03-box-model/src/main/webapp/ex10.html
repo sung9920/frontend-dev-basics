@@ -4,50 +4,42 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>float를 이용한 메뉴</title>
 <style type="text/css">
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box; 
-}
+* {margin:0; padding: 0}
 
 ul.nothing {
 	font-size: 12px;
 	color: #333;
 	list-style: none;
-	width: 800px;
-	margin: 100px auto;
-	height: 50px;
+	
+	width:800px;
+	margin:100px auto;
 }
 
 ul.nothing li {
 	font-weight: bold;
+
 	width: 100px;
 	text-align: center;
 	padding: 10px;
 	margin-right: 10px;
 	border: 1px solid #666;
-	float: left;
+	
+	float: right;
 }
 
-ul.nothing li:last-child {
+ul.nothing li:first-child {
 	margin-right: 0;
-}
-
-ul.nothing li:hover {
-	background-color: #999;
-	color: #fff;
-	cursor: pointer;
 }
 </style>
 </head>
 
 <body>
 	<ul class="nothing">
-		<li>메뉴 1</li>
-		<li>메뉴 2</li>
-		<li>메뉴 3</li>
-		<li>메뉴 4</li>
-		<li>메뉴 5</li>
+		<li>메뉴1</li>
+		<li>메뉴2</li>
+		<li>메뉴3</li>
+		<li>메뉴4</li>
+		<li>메뉴5</li>
 	</ul>
 </body>
 </html>
