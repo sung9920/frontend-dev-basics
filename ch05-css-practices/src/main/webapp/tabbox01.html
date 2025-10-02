@@ -13,12 +13,26 @@ body		{ font-family: '맑은 고딕' 돋움; font-size:0.75em; color:#333 }
 .tab-box ul li	{ float: right; width: 100px; border:1px solid #999; text-align:center; background-color: #ccc; height:22px; line-height:22px }	
 .tab-box > div  { width: 598px; height: 200px; margin-top: -1px; line-height: 200px; text-align: center; border:1px solid #999;}
 </style>
-<script src="" type="text/javascript"></script>
+<script>
+    liSelected = null;
+onTabClicked = function(e) {
+    var target = e.target;
+    if(target.tagName != 'LI') return;
+    
+    var tabBox = target.parentNode.parentNode;
+    var tabs = tabBox.getElementsByTagName('LI');
+    for(var i=0; i<tabs.length; i++) {
+        tabs[i].style.backgroundColor = '#ccc';
+    }
+    target.style.backgroundColor = '#fff';
+}
+
+</script>
 </head>
 <body>
 <div class="tab-box">
 	<ul>
-        <li>메뉴5</li>
+        <li onclick="onTabClicked()">메뉴5</li>
         <li>메뉴4</li>
         <li>메뉴3</li>
         <li>메뉴2</li>
