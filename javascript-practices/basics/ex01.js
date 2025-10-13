@@ -32,3 +32,10 @@ var f3 = new Function();
 console.log("f1:" + typeof(f1)); // function
 console.log("f2:" + typeof(f2)); // function
 console.log("f3:" + typeof(f3)); // function
+
+console.log("======= [04] 기본 타입과 유사객체 =======");
+var b1 = true;
+var b2 = new Boolean(true);
+
+console.log(b1.valueOf()); 
+console.log(b2.valueOf());
