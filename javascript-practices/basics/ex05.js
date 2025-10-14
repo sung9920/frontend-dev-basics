@@ -11,7 +11,7 @@ console.log("====[01] 생성자 함수");
 var MyObject = function(name, age) {
     console.log("MyObject constructor called");
     this.name = name;
-    this.age = this.age;
+    this.age = age;
 }
 
 var o1 = new MyObject("둘리", 10);
