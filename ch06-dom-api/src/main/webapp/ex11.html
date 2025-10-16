@@ -3,11 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+/*
+	1. Event Name
+		- load
+		- keydown -> keyup -> keypress
+		- mousemove, mouseover, mouseout
+		- mousedown -> mouseup -> mouseclick ... mousedown -> mouseup -> mouseclick -> dblclick
+		- touch (mobile)
+		- submit
+		- focus, blur, change
+	2. Event Attribute: DOM Event Model Lv. 0 -> inline, basic
+	   ex)
+	   onclick, onmouseover, onload, ...
+	   el.onclick = () => {};
+	   
+	3. Event Listener : DOM Event Model Lv. 2
+	   ex)
+	   el.addEventListener("click", () => {}); 	
+*/
+window.onload = function() {
+	document
+		.querySelector("#header-2")
+		.onclick = function() {
+		console.log("Event Model Level0 - Basic");
+	}
+	
+	document
+		.querySelector("#header-3")
+		.addEventListener("click", function() {
+			console.log("Event Model Level2 - 1");
+		});
+	
+	document
+		.querySelector("#header-3")
+		.addEventListener("click", function() {
+			console.log("Event Model Level2 - 2");
+		});
+	
+}
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>
 	<h2>5. Event 처리</h2>
-	<h3>Event Model Level0 - Inline</h3>
+	<h3 onclick="console.log('Event Model Level0 - Inline')">Event Model Level0 - Inline</h3>
 	<h3 id='header-2'>Event Model Level0 - Basic</h3>
 	<h3 id='header-3'>Event Model Level2</h3>
 </body>

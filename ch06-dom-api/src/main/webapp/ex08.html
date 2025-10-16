@@ -3,6 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+window.onload = function() {
+	setTimeout(function() {
+		var imgElement = document.createElement('img');
+		imgElement.src = "/ch06/loopy.png";
+		imgElement.alt = "루피: 하하하하";
+		imgElement.title = "루피: 하하하하";
+		imgElement.style.width = "100px";
+		
+		document.body.appendChild(imgElement);
+	}, 2000);
+}
+</script>
 </head>
 <body>
 	<h1 id='h' data-no='10'>DOM(Document Object Model)</h1>
